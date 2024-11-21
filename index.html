@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
@@ -11,13 +14,38 @@
 </head>
 
 <body>
+    <!-- ChatBot -->
+    <button class="chatbot-circle"></button>
+    <div class="chatbot-box">
+        <div class="title">
+            <p>May I Help You?</p>
+            <i class="fa-solid fa-xmark close"></i>
+        </div>
+        <div class="chatbox">
+            <div class="message-box bot">
+                <div class="message-bot">
+                    <p>Welcome to Royal Fitness! We're here to help you reach your fitness goals. How can we assist you today? 😊</p>
+                </div>
+            </div>
+        </div>
+        <div class="suggestions">
+                <p class="suggestion" data-message="I'm looking to join the gym.">I'm looking to join the gym.</p>
+                <p class="suggestion" data-message="Tell me about the monthly plan.">Tell me about the monthly plan.</p>
+                <p class="suggestion" data-message="Tell me about yoga classes.">Tell me about yoga classes.</p>
+        </div>
+        <div class="textarea">
+            <input type="text" placeholder="Type a message" id="user-input">
+            <button class="send-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+    
     <!-- Header Section -->
 
     <header>
         <a href="#" class="logo">Royal <span>Fitness</span></a>
-
+    
         <div class="bx bx-menu" id="menu-icon"></div>
-
+    
         <ul class="navbar">
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
@@ -25,32 +53,33 @@
             <li><a href="#plans">Pricing</a></li>
             <li><a href="#review">Review</a></li>
         </ul>
-
+    
         <div class="top-btn">
-            <a href="#plans" class="nav-btn">Join Us</a>
+            <a href="login.html" class="nav-btn">Join Us</a>
         </div>
-
+    
         <label class="switch">
             <input type="checkbox" id="theme-toggle">
             <span class="slider"></span>
         </label>
-</header>
+    </header>
 
    <!-- Home Section -->
-    <section id="home" class="home">
-        <div class="home-content" data-aos="zoom-in">
-            <h3>Build Your</h3>
-            <h1>Dream Physique</h1>
-            <h3><span class="multiple-text"></span></h3>
-            <p>Transform your body, elevate your confidence, and achieve the best version of yourself. Whether you're looking to gain muscle, shed fat, , building your dream physique is no longer a dream — it's a reality waiting for you. Start today and feel the difference tomorrow!.</p>
+   <section id="home" class="home">
+    <div class="home-content" data-aos="zoom-in">
+        <h3>Build Your</h3>
+        <h1>Dream Physique</h1>
+        <h3><span class="multiple-text"></span></h3>
+        <p>Transform your body, elevate your confidence, and achieve the best version of yourself. Whether you're looking to gain muscle, shed fat, building your dream physique is no longer a dream — it's a reality waiting for you. Start today and feel the difference tomorrow!.</p>
 
-            <a href="#plans" class="btn">Join Us</a>
-        </div>
+        <a href="login.html" class="btn">Join Us</a>
+    </div>
 
-        <div class="home-img" data-aos="zoom-in">
-            <img src="Assets/hero.png" alt="HeroImage">
-        </div>
-    </section>
+    <div class="home-img" data-aos="zoom-in">
+        <img src="Assets/hero.png" alt="HeroImage">
+    </div>
+</section>
+
 
     <!-- services Section Code -->
 
@@ -62,8 +91,9 @@
             <div class="row">
                 <img src="assets/image1.jpg" alt="">
 
-                
+                <br>
                 <a href="PhysiFit.html"><h4>Physical Fitness</h4></a>
+                </br>
             </div>
                 
 
@@ -250,6 +280,7 @@
             duration: 1400,
         });
     </script>
+    <script src="app.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
 
