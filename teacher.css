@@ -1,0 +1,95 @@
+/* General Page Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000000;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Teacher Container */
+.teacher-container {
+    max-width: 800px;
+    padding: 20px;
+    background: rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Teacher Name */
+.teacher-name {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #00ff33;
+    margin-bottom: 20px;
+}
+
+/* Teacher Image */
+.teacher-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(17, 243, 62, 0.2);
+    margin-bottom: 20px;
+}
+
+/* Teacher Bio */
+.teacher-bio {
+    justify-content: left;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .teacher-name {
+        font-size: 2.5rem;
+    }
+
+    .teacher-bio {
+        font-size: 1rem;
+    }
+}
+.book-now-btn {
+    position:sticky;
+    
+    bottom: 20px;
+    right: auto;
+    font-size: 24px;
+    font-weight: bold;
+    color: #5bff1a;
+    text-decoration: none;
+    padding: 15px 30px;
+    background: #3a3a3a; /* Greyish color */
+
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.book-now-btn:hover {
+    transform: scale(1.1); /* Slightly enlarges the button */
+    background: #00ff33;
+    color:#000000;
+    box-shadow: 0 0 20px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14;
+}
+/* Add a fade-in class */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Optional: slide effect */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Add this class to trigger the fade-in effect */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
